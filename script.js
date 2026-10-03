@@ -1,8 +1,7 @@
 // IMPORTANT:
 // Put your WhatsApp number below in international format WITHOUT +, spaces or dashes.
 // Example for an Indian number: 919876543210
-const whatsappNumber = ["918053061730" ,
-    "919053404700"];
+const whatsappNumber = "918053061730";
 
 const form = document.getElementById("contactForm");
 
@@ -13,7 +12,7 @@ form.addEventListener("submit", function (event) {
     const subject = document.getElementById("subject").value.trim();
     const message = document.getElementById("message").value.trim();
 
-    if (whatsappNumber.includes("X")) {
+    if (!whatsappNumber) {
         alert("Please add your WhatsApp number in script.js first.");
         return;
     }
